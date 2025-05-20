@@ -7,12 +7,40 @@
     <style>
       body {
         background-color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      .logo {
+      h2 {
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+      }
+      hr {
+        margin: 0;
+        border: 1px solid #eee;
+      }
+      button a {
+        text-decoration: none;
+        color: black;
+      }
+      button:hover a {
+        text-decoration: underline;
+      }
+      button {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: black;
         display: block;
-        margin: left;
-        height: 40px;
-        width: 50px;
+        font-size: 16px;
+        border-radius: 70px;
+        background: transparent;
+        padding: 20px solid #ffbc0d;
+      }
+
+      .logo {
+        height: 100px;
       }
       .tab {
         margin: 0 15px;
@@ -24,99 +52,216 @@
         font-size: 18px;
         text-align: top center;
       }
+
       .tabs {
         display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 30px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .tab,
+      .tab1,
+      .tab2,
+      .tab3 {
+        font-size: 18px;
+        padding: 0px 0px;
+        cursor: pointer;
+        color: black;
+      }
+      .tab1 {
+        font-weight: bold;
+        border-bottom: 3px solid #db0007;
+        color: black;
+      }
+      .tab1 span {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .tab2:hover,
+      .tab3:hover {
+        text-decoration: black underline;
+        color: black;
+      }
+
+      .tab2,
+      .tab3 {
+        border-radius: 11px;
+        background-color: #f2b20c;
+        font-weight: bold;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .meals {
+        display: flex;
         justify-content: center;
-        background-color: transparent;
-        padding: 10px;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .meal p {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .meal {
+        text-align: center;
+        width: 300px;
+      }
+      .meal img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .macmeals {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .meal2 p {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .meal2 {
+        text-align: center;
+        width: 300px;
+      }
+      .meal2 img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .foldovers {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .meal3 p {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .meal3 {
+        text-align: center;
+        width: 300px;
+      }
+      .meal3 img {
+        width: 100%;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
     <div class="tabs">
-      <h1>
-        <img
-          src="https://www.mcdonalds.co.za/media/mcdonalds-logo.png"
-          alt="Mcdonalds logo"
-          class="logo"
-        />
-      </h1>
-      <div class="tab">Our Menu</div>
-      <div class="tab">Know Our Food</div>
-      <div class="tab">Deals & Our App</div>
-      <div class="tab">MyMRewards</div>
-      <div class="tab">Family Hub</div>
-      <div class="tab">Find a Store</div>
-      <div class="tab">Order Now</div>
-      <div class="tab">Contact Us</div>
+      <div class="nav-left">
+        <h1>
+          <img
+            src="https://www.mcdonalds.co.za/media/mcdonalds-logo.png"
+            alt="Mcdonalds logo"
+            class="logo"
+          />
+        </h1>
+        <div class="tab1">Our Menu <span>▼</span></div>
+        <div class="tab">Know Our Food</div>
+        <div class="tab">Deals & Our App</div>
+        <div class="tab">MyMRewards</div>
+        <div class="tab">Family Hub</div>
+        <div class="tab">Find a Store</div>
+      </div>
+
+      <div class="nav-right">
+        <div class="tab2">
+          <button><a href="https://www.ubereats.com/za">Order Now</a></button>
+        </div>
+
+        <div class="tab3">
+          <button>
+            <a href="https://crmportal.mcdonalds.co.za/CustomerFeedback"
+              >Contact Us
+            </a>
+          </button>
+        </div>
+      </div>
     </div>
     <hr />
-    <ul>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu"
-          class="favourites"
-          target="_blank"
-        >
-          Customers Favourites
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/limited-offers"
-          class="menu"
-          target="_blank"
-          >Limited Offers</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/combo-meals"
-          class="menu"
-          target="_blank"
-          >Extra Value Meals</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/beef"
-          class="menu"
-          target="_blank"
-          >Beef</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/chicken-sandwiches"
-          class="menu"
-          target="_blank"
-          >Chicken</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/beverages"
-          class="menu"
-          target="_blank"
-          >Beverages</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/desserts-shakes"
-          class="menu"
-          target="_blank"
-          >Desserts and shakes</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.mcdonalds.co.za/menu/snacks-sides"
-          class="menu"
-          target="_blank"
-          >Sides</a
-        >
-      </li>
-    </ul>
+    <br />
+    <h2>Extra Value Meals</h2>
+    <br />
+    <br />
+    <div class="meals">
+      <div class="meal">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/2-cheeseburger-meal/2-cheeseburger-meals.webp"
+          alt="2 Cheeseburger Meal"
+        />
+        <p>2 Cheeseburger Meal</p>
+      </div>
+      <div class="meal">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/6-nuggets-meal/6pc-Nuggets-meal.webp"
+        />
+        <p>6 Piece Chicken McNuggets® Meal</p>
+      </div>
+      <div class="meal">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/bigmac-meal/Big-Mac-meal.webp"
+          alt="Big Mac Meal"
+        />
+        <p>Big Mac® Meal</p>
+      </div>
+    </div>
+    <br />
+    <div class="macmeals">
+      <div class="meal2">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/chilli-cheese-double-meal/Chilli-cheese-double-meal.webp"
+          alt="Chilli Cheeseburger Double Meal"
+        />
+        <p>Chilli Cheeseburger Double Meal</p>
+      </div>
+      <div class="meal2">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/mcfeast-meal/Mcfeast-meal.webp"
+          alt="McFeast meal"
+        />
+        <p>McFeast® Meal</p>
+      </div>
+      <div class="meal2">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/quarter-pounder-with-cheese-meal/Quarter-pounder-with-Cheese-meal.webp"
+          alt="Quarter Pounder® with Cheese Meal"
+        />
+        <p>Quarter Pounder® with Cheese Meal</p>
+      </div>
+    </div>
+    <div class="foldovers">
+      <div class="meal3">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/chicken-foldover-meal/Spicy-Chicken-foldover-meal.webp"
+          alt="Chicken Foldover Meal"
+        />
+        <p>Chicken Foldover Meal</p>
+      </div>
+      <div class="meal3">
+        <img
+          src="https://www.mcdonalds.co.za/media/products/foldover-spicy-meal/Spicy-Chicken-Foldover-Medium-Meal.png"
+          alt="Spicy Chicken Foldover Meal"
+        />
+        <p>Spicy Chicken Foldover Meal</p>
+      </div>
+    </div>
   </body>
 </html>
