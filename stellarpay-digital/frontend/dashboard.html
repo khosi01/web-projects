@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StellarPay Dashboard</title>
+    <style>
+      :root {
+        --primary-color: #b499f6;
+        --text-color: #fff;
+        --sidebar-bg: #1f1f2e;
+        --main-bg: #f9f9fc;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        display: flex;
+        background-color: var(--main-bg);
+        height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 240px;
+        background-color: var(--sidebar-bg);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .sidebar h2 {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: var(--primary-color);
+      }
+
+      .user-section {
+        margin-bottom: 30px;
+      }
+
+      .user-section .avatar {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .sidebar nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin: 12px 0;
+        display: block;
+      }
+
+      .sidebar nav a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Main content */
+      .main {
+        flex: 1;
+        padding: 30px;
+      }
+
+      .balance-section {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+      }
+
+      .balance-section h1 {
+        font-size: 28px;
+        color: #333;
+      }
+
+      .balance-section span {
+        color: gray;
+        font-size: 14px;
+      }
+
+      .cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card-box {
+        background-color: #fff;
+        border-left: 5px solid var(--primary-color);
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        min-width: 220px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .card-box h3 {
+        color: #333;
+      }
+
+      .card-box p {
+        font-size: 16px;
+        color: gray;
+      }
+
+      .year {
+        text-align: center;
+        margin-top: 40px;
+        color: gray;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Strive</h2>
+      <div class="user-section">
+        <div class="avatar">KZ</div>
+        <div><strong>Khosi Zulu</strong></div>
+        <div>Personal</div>
+      </div>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Accounts</a>
+        <a href="#">Cards</a>
+        <a href="#">Transactions</a>
+        <a href="#">Send/Receive</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </div>
+
+    <div class="main">
+      <div class="balance-section">
+        <h1>R28,460.00</h1>
+        <span>Total Account Balance in ZAR</span>
+      </div>
+
+      <div class="cards-section">
+        <div class="card-box">
+          <h3>Main Card</h3>
+          <p>•••• 1234 — Expires 02/2026</p>
+        </div>
+        <div class="card-box">
+          <h3>Freeze Card</h3>
+          <p>You can unfreeze it anytime.</p>
+        </div>
+        <div class="card-box">
+          <h3>Transactions</h3>
+          <p>View recent activity</p>
+        </div>
+      </div>
+
+      <div class="year">© 2025 StellarPay Digital Banking</div>
+    </div>
+  </body>
+</html>

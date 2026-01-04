@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokyo Weather Forecast</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 60px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #125be1;
+        font-size: 30px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 24px;
+        font-size: 16px;
+        color: white;
+        border: 2px solid #125be1;
+        border-radius: 70px;
+        background-color: #125be1;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0f4ac7;
+      }
+
+      .numbers1 {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .seconddegree {
+        font-weight: bold;
+      }
+
+      .weather-card {
+        text-align: center;
+        margin: 10px auto;
+        padding: 10px;
+        width: 180px;
+        transition: background-color 0.3s;
+      }
+
+      .weather-card:hover {
+        background-color: rgb(245, 245, 203);
+        cursor: pointer;
+      }
+
+      .weather-row {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="weather-emoji">🌤️</h1>
+
+    <div>
+      <h2>Currently 21° in Tokyo</h2>
+      <div class="numbers1">
+        <span>13°</span> / <span class="seconddegree">23°</span>
+      </div>
+    </div>
+
+    <div class="weather-card">
+      <div class="weather-row">🌧️ Tomorrow</div>
+      <div>10° / 22°</div>
+    </div>
+
+    <div class="weather-card">
+      <div class="weather-row">☀️ Saturday</div>
+      <div>25° / 28°</div>
+    </div>
+
+    <div class="weather-card">
+      <div class="weather-row">🌦️ Sunday</div>
+      <div>10° / 22°</div>
+    </div>
+
+    <p>
+      <button>Change City</button>
+      <br />
+      Coded by Khosi Zulu
+    </p>
+
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h2");
+        heading.innerHTML = newHeading;
+      }
+
+      function updateEmoji(emoji) {
+        let weatherEmoji = document.querySelector("#weather-emoji");
+        weatherEmoji.innerHTML = emoji;
+      }
+
+      function checkTemperature(temperature, city) {
+        if (temperature <= 0) {
+          updateEmoji("❄️");
+          return `Currently ${temperature}° in ${city}, Brr! It's freezing!`;
+        }
+
+        if (temperature <= 15) {
+          updateEmoji("☹️");
+          return `Currently ${temperature}° in ${city}, Quite chilly outside.`;
+        }
+
+        if (temperature <= 30) {
+          updateEmoji("🌤️");
+          return `Currently ${temperature}° in ${city}, Pleasant weather!`;
+        }
+
+        updateEmoji("🔥");
+        return `Currently ${temperature}° in ${city}, It's getting hot!`;
+      }
+
+      function changeCity() {
+        let city = prompt("Enter your city:");
+        let temperature = Number(prompt("Enter the temperature in °C:"));
+
+        let message = checkTemperature(temperature, city);
+        updateHeading(message);
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>

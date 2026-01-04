@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey - My hobby</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/962/original/bernd-dittrich-auArXsjEPV4-unsplash.jpg?1767275091");
+        background-size: cover;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          monospace;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #000000;
+        margin: 0;
+        position: relative;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 15px;
+        transition: all 0.5s ease;
+      }
+      footer {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        transition: background 0.4s ease;
+        z-index: -1;
+      }
+
+      body.dark .overlay {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      footer {
+        text-align: center;
+      }
+      .PageTheme {
+        padding: 10px 20px;
+        background-color: #065004;
+        color: white;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px;
+      }
+      .container {
+        text-align: center;
+        background-color: rgba(202, 255, 177, 0.5);
+        padding: 15px;
+        border-radius: 10px;
+        margin: 50px auto;
+        max-width: 700px;
+      }
+      .images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+      }
+      .images img:hover {
+        transform: scale(1.1) rotateY(15deg);
+      }
+      .joinTeam {
+        padding: 10px 20px;
+        background-color: #a3dc51;
+        color: rgb(12, 12, 12);
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .link {
+        color: black;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="light">
+    <button class="PageTheme">Dark Theme</button>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+      <h1>Hockey🏑</h1>
+      <h2>My favorite sport</h2>
+      <div class="images">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/960/original/jeffrey-f-lin-Uhlg5RoAtoI-unsplash.jpg?1767274075"
+          alt="unsplash-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/961/original/jeffrey-f-lin-_0f33DihP0M-unsplash.jpg?1767274906"
+          alt="unsplash-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/965/original/guillaume-didelet-8JBwHwZyLHw-unsplash.jpg?1767275291"
+          alt="unsplash-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/966/original/jeffrey-f-lin-nseQVzyQll4-unsplash.jpg?1767275663"
+          alt="unsplash-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/968/original/jeffrey-f-lin-jk0ZgqF_Am4-unsplash.jpg?1767276361
+"
+          alt="unsplash-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/969/original/2022_1438_17048_001_c4_29-scaled.jpg?1767279005"
+          alt="unsplash-image"
+        />
+      </div>
+      <p>
+        <strong>Hockey</strong> is a family of stick sports where two opposing
+        teams use hockey sticks to propel a ball or disk into a goal. There are
+        many types of hockey, and the individual sports vary in rules, numbers
+        of players, apparel, and playing surface. Hockey includes both
+        <em>summer and winter variations </em> that may be played on an outdoor
+        field, sheet of ice, or an indoor gymnasium. Some forms of hockey
+        require skates, either inline, roller or ice, while others do not
+      </p>
+      <button class="joinTeam">JOIN TEAM</button>
+      <br /><br />Learn more about hockey on
+      <a href="https://en.wikipedia.org/wiki/Hockey" class="link">Wikipedia</a>
+    </div>
+
+    <footer>Coded by with 💙 by Makhosazana Zulu</footer>
+    <script>
+      function joinTeam() {
+        let question = prompt("Do you want to join the hockey team? (yes/no)");
+        joinsTheTeam(question);
+      }
+
+      function joinsTheTeam(question) {
+        if (question && question.toLowerCase().trim() === "yes") {
+          alert("Thank you for joining the hockey team!");
+        } else {
+          alert("Thank you for your interest, come back anytime!");
+        }
+      }
+
+      let button = document.querySelector(".joinTeam");
+      button.addEventListener("click", function () {
+        joinTeam();
+      });
+
+      function darkTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".PageTheme");
+      themeButton.addEventListener("click", darkTheme);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html class manipulation</title>
+  </head>
+  <style>
+    button {
+      padding: 10px;
+      color: #ffffff;
+      font-size: 20px;
+      background-color: rgb(2, 2, 108);
+      border-radius: 5px;
+    }
+    .page {
+      background: #ffffff;
+      width: 100%;
+      height: 100vh;
+    }
+    .darkblue {
+      background-color: #010163;
+    }
+  </style>
+  <body>
+    <div class="page"></div>
+    <button>Dark Theme</button>
+  </body>
+  <script>
+    function darkTheme() {
+      let page = document.querySelector(".page");
+      page.classList.add("darkblue");
+    }
+    let button = document.querySelector("button");
+    button.addEventListener("click", darkTheme);
+  </script>
+</html>
